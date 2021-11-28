@@ -10,16 +10,18 @@ pencil.addEventListener("click", function(){
     allItems.innerHTML = "";
 });
 
-userInput.addEventListener("keydowm", function(event){
+userInput.addEventListener("keydown", function(event){
     if(event.key == "Enter")
         addItem();
 });
 
-function addItems(){
+function addItem(){
     let h2 = document.createElement("h2");
-    h2.innerHTML = "_ " + userInput.value
+    h2.innerHTML = "_ " + userInput.value;
 
     h2.addEventListener("click", function(){
         h2.style.textDecoration = "line-through";
     })
+    allItems.insertAdjacentElement("beforeend", h2);
+    userInput.value = "";
 }
