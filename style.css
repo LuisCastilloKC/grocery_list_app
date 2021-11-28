@@ -6,10 +6,11 @@
 body{
     font-family: "Mumblers Demo";
     background: orange;
+    border: none;
 }
 
 .container{
-    border: 1px solid black;
+    border: none;
 
     width: 90%;
     margin: auto;
@@ -46,4 +47,20 @@ body{
     margin-right: 10px;
     margin-top: 15px;
     font-size: 2rem;
+}
+
+@media(max-width:480){
+    .groceries h1{
+        font-size: 2rem;
+    }
+    .groceries i{
+        font-size: 1.5rem;
+    }
+    .groceries input{
+        font-size: 1rem;
+    }
+    .allItems h2{
+        margin-left: 25px;
+        font-size: 1.5rem;
+    }
 }
