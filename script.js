@@ -9,3 +9,17 @@ const userInput = document.getElementById("userInput");
 pencil.addEventListener("click", function(){
     allItems.innerHTML = "";
 });
+
+userInput.addEventListener("keydowm", function(event){
+    if(event.key == "Enter")
+        addItem();
+});
+
+function addItems(){
+    let h2 = document.createElement("h2");
+    h2.innerHTML = "_ " + userInput.value
+
+    h2.addEventListener("click", function(){
+        h2.style.textDecoration = "line-through";
+    })
+}
